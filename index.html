@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>AC 4 | Cadastro de Alunos</title>
+    <!-- LINKS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <!-- TÍTULO DO CABEÇALHO -->
+        <div class="title_paginas">
+            Atividade Contínua 4 - Tecnologia Web
+        </div>
+    </header>
+        <div id="quadrado_form">
+            <h3>Cadastro de Alunos</h3>
+            <!-- FORM -->
+            <form name="frmCadAluno" method="post" action="index.html">
+              <div id="segura_inputs">
+
+                <!-- NOME -->
+                <label for="nome" class="label_inputs">* Nome do Aluno</label> <br>
+                <input class="big_inputs" type="text" name="nome" value="" maxlength="20" required> <br>
+
+                <!-- ENDEREÇO -->
+                <label for="endereco" class="label_inputs">* Endereço</label> <br>
+                <input class="big_inputs" type="text" name="endereco" value="" maxlength="30" required> <br>
+
+                <!-- CIDADE -->
+                <div class="safe">
+                    <label for="cidade" class="label_inputs">* Cidade</label> <br>
+                    <input class="medium_inputs" type="text" name="cidade" value="" required> <br>
+                </div>
+
+                <!-- ESTADO -->
+                <div class="safe">
+                    <label for="uf" class="label_inputs">* UF</label> <br>
+                    <input class="minuscle_inputs" type="text" name="uf" value="" maxlength="2" required> <br>
+                </div>
+
+                <!-- RG -->
+                <div class="safe">
+                    <label for="rg" class="label_inputs">* RG</label> <br>
+                    <input class="medium_inputs" type="text" name="rg" onkeydown="javascript: fMasc(this, mRG);" value="" maxlength="12" title="XX.XXX.XXX-X" required> <br>
+                </div>
+
+                <!-- CPF -->
+                <div class="safe">
+                    <label for="cpf" class="label_inputs">* CPF</label> <br>
+                    <input class="medium_inputs" type="text" name="cpf" onkeydown="javascript: fMasc(this, mCPF);" value="" maxlength="14" title="XXX.XXX.XXX-XX" required> <br>
+                </div>
+
+                <!-- E-MAIL -->
+                <label for="email" class="label_inputs">* E-mail</label> <br>
+                <input class="big_inputs" type="email" name="email" value="" maxlength="20" required> <br>
+
+                <b>Redes Sociais:</b> <br>
+
+                <!-- CHECKBOX -->
+                <input type="checkbox" name="rd" value="" class="check"> Facebook 
+                <input type="checkbox" name="rd" value="" class="check"> Twitter 
+                <input type="checkbox" name="rd" value="" class="check"> WhatsApp 
+                <input type="checkbox" name="rd" value="" class="check"> Outros 
+
+                <!-- CURSOS -->
+                <select name="sltCursos" class="input_slt">
+                  <option value="">Cursos</option>
+                  <option value="">Redes de Computadores</option>
+                  <option value="">Sistemas de Informação</option>
+                  <option value="">Análise e Desenvolvimento de Sistemas</option>
+                </select>
+
+                <!-- TEXTO -->
+                <label for="nome" class="label_inputs">* Texto</label> <br>
+                <textarea class="txt_area" name="texto" maxlength="100" required></textarea>
+
+                <span id="span_preenchimento">* preenchimento obrigatório</span>
+
+                <!-- BOTÃO -->
+                <div class="segura_botao">
+                  <button class="botao_form" type="submit" name="btEnviar" value="">Cadastrar</button>
+                </div>
+              </div>
+            </form>
+            <!-- END FORM -->
+        </div>
+
+        <!-- AUTOR -->
+        <div class="by">
+            Developed by: João Victor Batista Gonçalves
+        </div>
+
+        <!-- SCRIPTS -->
+        <script src="js/mascara.js"></script>
+  </body>
+</html>
