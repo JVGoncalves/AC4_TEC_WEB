@@ -16,8 +16,36 @@ function mCPF(cpf){
   return cpf
 }
 
-function mRG(rg){
-    rg=rg.replace(/\D/g,"");
-    rg=rg.replace(/(\d{2})(\d{3})(\d{3})(\d{1})$/,"$1.$2.$3-$4");
-    return rg;
+function bloqueiaLetra(e)
+{
+	var tecla=new Number();
+	if(window.event) {
+		tecla = e.keyCode;
+	}
+	else if(e.which) {
+		tecla = e.which;
+	}
+	else {
+		return true;
+	}
+	if((tecla >= "97") && (tecla <= "122")){
+		return false;
+	}
+}
+
+function bloqueiaNumero(e)
+{
+	var tecla=new Number();
+	if(window.event) {
+		tecla = e.keyCode;
+	}
+	else if(e.which) {
+		tecla = e.which;
+	}
+	else {
+		return true;
+	}
+	if((tecla >= "48") && (tecla <= "57")){
+		return false;
+	}
 }

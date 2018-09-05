@@ -23,7 +23,7 @@
 
                 <!-- NOME -->
                 <label for="nome" class="label_inputs">* Nome do Aluno</label> <br>
-                <input class="big_inputs" type="text" name="nome" value="" maxlength="20" required> <br>
+                <input class="big_inputs" type="text" name="nome" onkeypress="return bloqueiaNumero(event)" value="" maxlength="20" title="Apenas letras" required> <br>
 
                 <!-- ENDEREÇO -->
                 <label for="endereco" class="label_inputs">* Endereço</label> <br>
@@ -32,19 +32,19 @@
                 <!-- CIDADE -->
                 <div class="safe">
                     <label for="cidade" class="label_inputs">* Cidade</label> <br>
-                    <input class="medium_inputs" type="text" name="cidade" value="" required> <br>
+                    <input class="medium_inputs" type="text" name="cidade" onkeypress="return bloqueiaNumero(event)" value="" required> <br>
                 </div>
 
                 <!-- ESTADO -->
                 <div class="safe">
                     <label for="uf" class="label_inputs">* UF</label> <br>
-                    <input class="minuscle_inputs" type="text" name="uf" value="" maxlength="2" required> <br>
+                    <input class="minuscle_inputs" type="text" name="uf" onkeypress="return bloqueiaNumero(event)" value="" maxlength="2" required> <br>
                 </div>
 
                 <!-- RG -->
                 <div class="safe">
                     <label for="rg" class="label_inputs">* RG</label> <br>
-                    <input class="medium_inputs" type="text" name="rg" onkeydown="javascript: fMasc(this, mRG);" value="" maxlength="12" title="XX.XXX.XXX-X" required> <br>
+                    <input class="medium_inputs" type="text" name="rg" value="" maxlength="9" title="XXXXXXXXX" required> <br>
                 </div>
 
                 <!-- CPF -->
@@ -88,9 +88,9 @@
             <!-- END FORM -->
         </div>
 
-        <!-- AUTOR -->
+        <!-- AUTORES -->
         <div class="by">
-            Developed by: João Victor Batista Gonçalves
+            <b>Desenvolvido por:</b> <br> João Victor Gonçalves <br> Thaís Gasparetto <br> Thiago Queiroz <br> Vitor Antunes <br> Vinícius Ribeiro <br> Lucas Comim
         </div>
 
         <!-- SCRIPTS -->
